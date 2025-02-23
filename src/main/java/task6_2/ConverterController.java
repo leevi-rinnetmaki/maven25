@@ -10,9 +10,16 @@ public class ConverterController {
     }
 
     public void convert(){
-        double value = Double.parseDouble(view.getValue());
-        String convert = view.radioLeft();
-        String converted = view.radioRight();
-        view.setCOnverted(Double.toString(model.convert(value, convert, converted)));
+        try {
+            double value = Double.parseDouble(view.getValue());
+            String convert = view.radioLeft();
+            String converted = view.radioRight();
+            view.setCOnverted(String.format("%.2f", model.convert(value, convert, converted)));
+            view.setErrorLabel("");
+
+        }catch (Exception e){
+            view.setErrorLabel("ERROR");
+            System.out.println("ERROR " + e.getMessage());
+        }
     }
 }

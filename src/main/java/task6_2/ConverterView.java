@@ -31,6 +31,7 @@ public class ConverterView extends Application {
     private TextField textLeft;
     private TextField textRight;
     private Button convertButton;
+    private Label errorLabel;
 
 
     public void start(Stage stage) {
@@ -60,6 +61,7 @@ public class ConverterView extends Application {
         textLeft = new TextField();
         textRight = new TextField();
         convertButton = new Button("Convert");
+        errorLabel = new Label();
 
         //LEFT
         dollarLeft.setToggleGroup(toggleGroupLeft);
@@ -85,6 +87,7 @@ public class ConverterView extends Application {
         textRight.setAlignment(Pos.BOTTOM_CENTER);
 
         center.setCenter(convertButton);
+        center.setBottom(errorLabel);
 
         convertButton.setOnAction(calue ->{
             controller.convert();
@@ -126,5 +129,9 @@ public class ConverterView extends Application {
 
     public void setCOnverted(String value){
         textRight.setText(value);
+    }
+
+    public void setErrorLabel(String value){
+        errorLabel.setText(value);
     }
 }
