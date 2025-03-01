@@ -1,13 +1,14 @@
 package task6_4;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main{
 
-    @FXML
-    private Label definitionLabel;
+
     public static void main(String[] args) {
-        Test.launch(Test.class);
+        View.launch(View.class);
     }
 }
