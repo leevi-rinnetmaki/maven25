@@ -1,6 +1,6 @@
 package task6_2;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+//import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
