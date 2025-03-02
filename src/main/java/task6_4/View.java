@@ -10,16 +10,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class View extends Application {
-    private Model model;
-    private Controller controller;
 
     public View(){
         System.out.println(this);
     }
 
     public void start(Stage stage) throws Exception {
-        //model = new Model(/*controller, this*/);
-        //controller = new Controller();
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/test.fxml"));
         Parent root = fxmlLoader.load();

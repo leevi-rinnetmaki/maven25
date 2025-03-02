@@ -12,48 +12,52 @@ public class Controller {
     Model model;
     public Controller() {
         System.out.println(this);
-        this.model = new Model();
+        this.model = new Model(this);
     }
 
     @FXML
-    private VBox root;
+    public VBox root;
 
     @FXML
-    private HBox top;
+    public HBox top;
 
     @FXML
-    private VBox left;
+    public VBox left;
 
     @FXML
-    private TextField leftTitle;
+    public TextField leftTitle;
 
     @FXML
-    private TextArea leftText;
+    public TextArea leftText;
 
     @FXML
-    private VBox right;
+    public VBox right;
 
     @FXML
-    private Label rightTitle;
+    public Label rightTitle;
 
     @FXML
-    private Label rightText;
+    public Label rightText;
 
     @FXML
-    private Button add;
+    public Button add;
 
     @FXML
-    private ChoiceBox<String> choiceBox;
+    public ChoiceBox<String> choiceBox;
 
-    /*
-    public void initialize() {
-        myLabel.setText("Hi");
-    }
+    @FXML
+    public Button watch;
 
-     */
     public void addNote(){
-        System.out.println("testi");
-        rightText.setText("testi");
+        System.out.println(leftTitle.getText());
+        model.noteBook.addNote(leftTitle.getText(), leftText.getText());
+        choiceBox.getItems().add(leftTitle.getText());
+    }
+
+    public void watch(){
+        Model.Note note = model.noteBook.getNote(choiceBox.getValue());
+        rightTitle.setText(note.title);
+        rightText.setText(note.content);
     }
 
 }

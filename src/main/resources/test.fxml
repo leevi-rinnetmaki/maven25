@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task6_4.Controller">
    <children>
       <HBox fx:id="top" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -21,13 +20,14 @@
             </VBox>
             <VBox fx:id="right" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="rightTitle" text="Label" />
-                  <Label fx:id="rightText" text="Label" />
+                  <Label fx:id="rightTitle" text="Title" />
+                  <Label fx:id="rightText" text="Content" />
                </children>
             </VBox>
          </children>
       </HBox>
       <Button fx:id="add" mnemonicParsing="false" onAction="#addNote" text="add" />
-      <ChoiceBox fx:id="list" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+      <Button fx:id="watch" mnemonicParsing="false" onAction="#watch" text="watch" />
    </children>
 </VBox>
